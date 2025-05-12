@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="/css/立体相册.css">
+    <title>登录</title>
+</head>
+<body>
+    <div class="cube">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+        <div class="img4"></div>
+        <div class="img5"></div>
+        <div class="img6"></div>
+    </div>
+    <div id="wrap">
+        
+        <img src="./cuisine/logo.png" class="logo" alt="">
+        <p class="p1">
+            <label for="username">账号</label>
+            <input type="text" id="username" placeholder="请输入用户名">
+            <!-- <span class="tips">请输入正确的用户名</span> -->
+        </p>
+        <p>
+            <label for="password">密码</label>
+            <input type="password" placeholder="请输入密码" id="password">
+            <!-- <span class="tips">密码错误！</span> -->
+        </p>
+        <a href="主食.html">
+            <div>
+                <button id="register">登录</button>
+                <button>注册</button>
+                <script>
+                    const loginButton = document.getElementById('login-button');
+                    register.addEventListener('click', () => {
+                        alert('登录成功!');
+                    });
+                </script>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

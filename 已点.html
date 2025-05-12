@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>order</title>
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/order.css">
+    <link rel="stylesheet" href="js/取餐号.js">
+</head>
+<body>
+    <div id="wrap">
+        <div id="subBar">
+            <a href="主食.html">
+                <img src="./cuisine/logo.png" class="logo" alt="">
+            </a>
+            <div class="message">
+                <p>欢迎您！Leo Jason</p>
+                <p>空闲桌位：1、5、8、10</p>
+                <!-- <p>正在点餐：1号桌</p> -->
+                <!-- <p>正在用餐：8号桌</p> -->
+                <p>取餐号码：<span id="pickup-number">—</span></p>
+                <a href="login.html">
+                    <button style="font-size: 18px;" id="logout"><span class="iconfont" style="font-size: 20px;">&#xe63b;</span>退出点餐</button>
+                </a>
+            </div>
+            <ul class="action">
+                <li style="color: #156082; font-weight: bold;" class="ac"><span data-href="已点.html" class="iconfont">&#xe63f</span> 已点菜品</li>
+                <li><span data-href="table.html" class="iconfont">&#xe618</span>选择座位</li>
+                <li><span data-href="随机点餐.html" class="iconfont">&#xe750</span> 随机点餐</li>
+                <li><span data-href="潮食文化.html" class="iconfont">&#xe60f</span> 潮食文化</li>
+                <script src="/js/取餐号.js"></script>
+            </ul>
+        </div>
+        <div id="navBar">
+            <!-- 已点结构 -->
+            <ul class="navWrap">            
+                <li style="color: #156082; font-weight: bold;">
+                    <span class="iconfont">&#xe648;</span>
+                    <span class="text">已点</span>
+                </li>
+                <a href="./已下单.html" class="nv">
+                    <li>
+                        <span class="iconfont">&#xe601;</span>
+                        <span class="ifont">已下单</span>
+                    </li>
+                </a>
+                
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="砂锅蟹粥">
+                <button>
+                    <span class="iconfont">&#xe70b;</span>
+                </button>
+            </div>
+ 
+        </div>
+        <script>
+            var links = document.querySelectorAll('.iconfont');
+            var links1 = document.querySelectorAll('.logo');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    
+                    var url = link.getAttribute('data-href');
+                    
+                    window.location.href = url;
+                });
+            });
+        </script>
+        <div id="content">
+            <!-- 已下单 -->
+            <ul class="orderBox shopped">
+                <li>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="./cuisine/白米饭.png" alt=""></td>
+                                <td>白米饭</td>
+                                <td>
+                                    <button><span class="iconfont">&#xe608;</span></button>
+                                    <span class="number">1</span>
+                                    <button><span class="iconfont">&#xe621;</span></button>
+                                </td>
+                                <td>2¥ x 1</td>
+                                <td>备注</td>
+                                <td>
+                                    <!-- <label for="checkBox" class="checkbox-label">
+                                        <input type="checkbox" id="checkBox" class="checkbox-input">
+                                        <span class="checkbox"></span>
+                                    </label> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="./cuisine/蚝烙.png" alt=""></td>
+                                <td>蚝烙</td>
+                                <td>
+                                    <button><span class="iconfont">&#xe608;</span></button>
+                                    <span class="number">1</span>
+                                    <button><span class="iconfont">&#xe621;</span></button>
+                                </td>
+                                <td>28.7¥ x 1</td>
+                                <td>备注</td>
+                                <td>
+                                    <!-- <label for="checkBox" class="checkbox-label">
+                                        <input type="checkbox" id="checkBox" class="checkbox-input">
+                                        <span class="checkbox"></span>
+                                    </label> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="foot">
+                        <div>
+                            <span>桌号：<strong>10</strong>号桌</span>
+                            <span>人数：1</span>
+                            <span>订单号：1623849035294</span>
+                            <a href="主食.html">
+                                <button style="color: #e3ebe8; height: 25px;width: 40px;" class="addDishes">添菜</button>
+                            </a>                            
+                        </div>
+                        <div>
+                            <span class="pack" style="margin-right: 10px;">打包</span>
+                            <label for="checkBox" class="checkbox-label">
+                                <input type="checkbox" id="checkBox" class="checkbox-input" style="margin-top: 1px; height: 20px;
+                                width: 20px;">
+                                <span class="checkbox"></span>
+                            </label>
+                            <span>总消费：¥ <strong>30.7</strong></span>
+                            <button style="color: #e3ebe8;" id = "order-button" class="pay">下单</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

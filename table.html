@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/table copy.css">
+    <link rel="stylesheet" href="/css/common/subBar.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="subBar">
+            <a href="主食.html">
+                <img src="./cuisine/logo.png" class="logo" alt="">
+            </a>
+            <div class="message">
+                <p>欢迎您！Leo Jason</p>
+                <p>空闲桌位：1、5、8、10</p>
+                <!-- <p>正在点餐：1号桌</p> -->
+                <!-- <p>正在用餐：8号桌</p> -->
+                <p>取餐号码：<span id="pickup-number">—</span></p>
+                <a href="login.html">
+                    <button style="font-size: 18px;" id="logout"><span class="iconfont" style="font-size: 20px;">&#xe63b;</span>退出点餐</button>
+                </a>
+            </div>
+            <ul class="action">
+                <li class="ac"><span data-href="已点.html" class="iconfont">&#xe63f</span> 已点菜品</li>
+                <li style="color: #156082; font-weight: bold;"><span data-href="table.html" class="iconfont">&#xe618</span>选择座位</li>
+                <li><span data-href="随机点餐.html" class="iconfont">&#xe750</span> 随机点餐</li>
+                <li><span data-href="潮食文化.html" class="iconfont">&#xe60f</span> 潮食文化</li>
+                <script src="/js/取餐号.js"></script>
+            </ul>
+            <script>
+                var links = document.querySelectorAll('.iconfont');
+        
+                links.forEach(function(link) {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        
+                        var url = link.getAttribute('data-href');
+                        
+                        window.location.href = url;
+                    });
+                });
+            </script>
+        </div>
+        <div id="content">
+            <ul class="legend">
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span>空闲桌</span>
+                    
+                </li>
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span>点餐中</span>
+                </li>
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span>用餐中</span>
+                </li>
+            </ul>
+            <ul class="table">
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">1号桌</span>
+                    <label for="checkBox" class="checkbox-label">
+                        <input type="checkbox" id="checkBox" class="checkbox-input" style="margin-top: 1px; height: 20px;
+                        width: 20px;">
+                        <span class="checkbox"></span>
+                    </label>
+                </li>
+                <li class="eating">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">2号桌</span>
+                </li>
+                <li class="eating">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">3号桌</span>
+                </li>
+                <li class="ordering">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">4号桌</span>
+                </li>
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">5号桌</span>
+                    <label for="checkBox" class="checkbox-label">
+                        <input type="checkbox" id="checkBox" class="checkbox-input" style="margin-top: 1px; height: 20px;
+                        width: 20px;">
+                        <span class="checkbox"></span>
+                    </label>
+                </li>
+                <li class="eating">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">6号桌</span>
+                </li>
+                <li class="ordering">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">7号桌</span>
+                </li>
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">8号桌</span>
+                    <label for="checkBox" class="checkbox-label">
+                        <input type="checkbox" id="checkBox" class="checkbox-input" style="margin-top: 1px; height: 20px;
+                        width: 20px;">
+                        <span class="checkbox"></span>
+                    </label>
+                </li>
+                <li class="eating">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">9号桌</span>
+                </li>
+                <li>
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">10号桌</span>
+                    <label for="checkBox" class="checkbox-label">
+                        <input type="checkbox" id="checkBox" class="checkbox-input" style="margin-top: 1px; height: 20px;
+                        width: 20px;">
+                        <span class="checkbox"></span>
+                    </label>
+                </li>
+                <li class="ordering">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">11号桌</span>
+                </li>
+                <li class="eating">
+                    <div><span class="iconfont">&#xe600;</span></div>
+                    <span class="桌">12号桌</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/product.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="subBar">
+            <a href="主食.html">
+                <img src="./cuisine/logo.png" class="logo" alt="">
+            </a>
+            <div class="message">
+                <p>欢迎您！Leo Jason</p>
+                <p>空闲桌位：1、5、8、10</p>
+                <p>取餐号码：<span id="pickup-number">—</span></p>
+                <a href="login.html">
+                    <button style="font-size: 18px;" id="logout"><span class="iconfont" style="font-size: 20px;">&#xe63b;</span>退出点餐</button>
+                </a>
+            </div>
+            <ul class="action">
+                <li class="ac"><span data-href="已点.html" class="iconfont">&#xe63f</span> 已点菜品</li>
+                <li><span data-href="table.html" class="iconfont">&#xe618</span>选择座位</li>
+                <li><span data-href="随机点餐.html" class="iconfont">&#xe750</span> 随机点餐</li>
+                <li><span data-href="潮食文化.html" class="iconfont">&#xe60f</span> 潮食文化</li>
+                <script src="/js/取餐号.js"></script>
+            </ul>
+            <script>
+                var links = document.querySelectorAll('.iconfont');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        var url = link.getAttribute('data-href');
+                        window.location.href = url;
+                    });
+                });
+            </script>
+        </div>
+        <div id="navBar">
+            <ul class="navWrap">
+                <li>
+                    <span class="iconfont"></span>
+                    <span class="text"></span>
+                </li>                
+                
+                <a href="主食.html" class="ic">
+                    <li>
+                        <span class="iconfont">&#x10121;</span>
+                        <span class="text">主食</span>
+                    </li>
+                </a>
+                <a href="配菜.html" class="ic">
+                    <li style="color: #156082; font-weight: bold;">
+                        <span class="iconfont">&#xe62b;</span>
+                        <span class="text">配菜</span>
+                    </li>
+                </a>
+                
+                <a href="小吃.html" class="ic">
+                    <li>
+                        <span class="iconfont">&#xe7ea;</span>
+                        <span class="text">小吃</span>
+                    </li>
+                </a>
+                <a href="最优套餐.html" class="ic">
+                    <li>
+                        <span class="iconfont">&#xe620;</span>
+                        <span class="text">最优套餐</span>
+                    </li>
+                </a>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="砂锅蟹粥">
+                <button>
+                    <span class="iconfont">&#xe70b;</span>
+                </button>
+            </div>
+        </div>
+        <div id="content">
+            <div class="icon"  data-tooltip="按评分排序">
+                <button class="iconfont" id="sortButton">&#xe656; 排序</button>
+            </div>
+            <ul class="foodList" id="List">
+                
+                <li class ="info">
+                    <img src="/cuisine/蚝烙.png" alt="">
+                    <div class="iconfont recommend">10</div>
+                    <div class="bar">
+                        <h3>蚝烙</h3>
+                        <p>
+                            <span class="price">28.7元/份</span>
+                            <button><span class="iconfont" id="add3">&#xe728;</span></button>
+                            <script>
+                                add3.addEventListener('click', () => {
+                                    alert('添加成功!');
+                                });
+                            </script>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/卷章粒.png" alt="">
+                    <span class="iconfont recommend">6.7</span>
+                    <div class="bar">
+                        <h3>卷章粒</h3>
+                        <p>
+                            <span class="price">10元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/生腌鲜虾.png" alt="">
+                    <span class="iconfont recommend">8.9</span>
+                    <div class="bar">
+                        <h3>生腌鲜虾</h3>
+                        <p>
+                            <span class="price">25元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/潮汕鱼丸.jpg" alt="">
+                    <span class="iconfont recommend">6.5</span>
+                    <div class="bar">
+                        <h3>鱼丸汤</h3>
+                        <p>
+                            <span class="price">16.5元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/隆江猪脚.png" alt="">
+                    <span class="iconfont recommend">7.2</span>
+                    <div class="bar">
+                        <h3>隆江猪脚</h3>
+                        <p>
+                            <span class="price">28.75元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/普宁豆干.png" alt="">
+                    <span class="iconfont recommend">8.3</span>
+                    <div class="bar">
+                        <h3>普宁豆干</h3>
+                        <p>
+                            <span class="price">13.9元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/炒手工虾丸.png" alt="">
+                    <span class="iconfont recommend">9.8</span>
+                    <div class="bar">
+                        
+                        <p>
+                            <h3 style="margin-left: 0;">炸虾丸</h3>
+                            <span class="price">31.68元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/炒油菜花.png" alt="">
+                    <span class="iconfont recommend">9.9</span>
+                    <div class="bar">
+                        <h3>炒油菜花</h3>
+                        <p>
+                            <span class="price">12.85元/份</span>
+                            <button><span class="iconfont" id="add4">&#xe728;</span></button>
+                            <script>
+                                add4.addEventListener('click', () => {
+                                    alert('添加成功!');
+                                });
+                            </script>
+                        </p>
+                    </div>
+                </li>
+                <li class ="info">
+                    <img src="/cuisine/鱿鱼炒青椒.png" alt="">
+                    <span class="iconfont recommend">8.5</span>
+                    <div class="bar">
+                        <h3>炒鱿鱼</h3>
+                        <p>
+                            <span class="price">20.66元/份</span>
+                            <button><span class="iconfont" id="add">&#xe728;</span></button>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/js/sort配菜.js"></script>
+</body>
+</html>

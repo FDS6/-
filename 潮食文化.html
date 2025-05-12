@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="/css/common/table copy 2.css">
+    <link rel="stylesheet" href="/css/common/culture.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="subBar">
+            <a href="主食.html">
+                <img src="./cuisine/logo.png" class="logo" alt="">
+            </a>
+            <div class="message">
+                <p>欢迎您！Leo Jason</p>
+                <p>空闲桌位：1、5、8、10</p>
+                <!-- <p>正在点餐：1号桌</p> -->
+                <!-- <p>正在用餐：8号桌</p> -->
+                <p>取餐号码：<span id="pickup-number">—</span></p>
+                <a href="login.html">
+                    <button style="font-size: 18px;" id="logout"><span class="iconfont" style="font-size: 20px;">&#xe63b;</span>退出点餐</button>
+                </a>
+            </div>
+            <ul class="action">
+                <li class="ac"><span data-href="已点.html" class="iconfont">&#xe63f</span> 已点菜品</li>
+                <li><span data-href="table.html" class="iconfont">&#xe618</span>选择座位</li>
+                <li><span data-href="随机点餐.html" class="iconfont" >&#xe750</span> 随机点餐</li>
+                <li style="color: #156082; font-weight: bold;"><span data-href="潮食文化.html" class="iconfont">&#xe60f</span> 潮食文化</li>
+                <script src="/js/取餐号.js"></script>
+            </ul>
+            <script>
+                var links = document.querySelectorAll('.iconfont');
+        
+                links.forEach(function(link) {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        
+                        var url = link.getAttribute('data-href');
+                        
+                        window.location.href = url;
+                    });
+                });
+            </script>
+        </div>
+        
+        <div id="content">
+            <header>                
+                <h1>潮食文化之隆江猪脚<p style="font-size: 20px; margin-left: 150px; margin-top: 14px;">2025.1.8</p></h1>
+            </header>  
+                                        
+            <main>              
+                <article>
+                    <p>
+                        隆江卤猪脚饭，是一道具有浓郁地方特色的美食，以其独特的口感和鲜美的味道而备受食客喜爱。然而，这道美食的来历却鲜为人知。下面，就让我们一起探寻隆江卤猪脚饭的来历。   
+                    </p>
+                    <p>
+                        一、起源
+                        隆江卤猪脚饭的起源可以追溯到清朝时期。当时，隆江地区是一个繁荣的商业中心，商贾云集，人流如潮。为了满足大量客商的饮食需求，当地厨师们开始研究各种特色美食。其中，一道以猪脚为主要食材的菜品逐渐崭露头角，成为了当地的名吃。
+                    </p>
+                    <p>
+                        二、发展
+                        随着时间的推移，这道菜品的名声逐渐传遍了整个隆江地区。许多厨师纷纷效仿，改进烹饪工艺，使得这道菜品的口味更加丰富多样。同时，一些商家也开始将这道菜品作为招牌菜推出，吸引更多的顾客前来品尝。
+                    </p>
+                    <p>
+                        三、传承与创新
+                        在传承的过程中，隆江卤猪脚饭不断吸收新的烹饪技术和食材，逐渐形成了自己独特的风格。同时，一些厨师也开始尝试将其他地方的烹饪技术融入到这道菜品中，使得隆江卤猪脚饭的口味更加丰富多样。
+                    </p>
+                    <p>
+                        四、现代发展
+                        如今，隆江卤猪脚饭已经成为了潮汕地区的特色美食之一。在各大餐馆、小吃摊和家庭餐桌上都能看到这道菜品的身影。同时，随着互联网的普及和物流的发展，隆江卤猪脚饭也逐渐走出潮汕地区，走向全国乃至全世界。
+                    </p>
+                    <p>
+                        五、文化内涵
+                        隆江卤猪脚饭不仅仅是一道美食，更是一种文化的象征。它代表了潮汕地区人民的勤劳智慧和创新精神。同时，这道菜品也蕴含了丰富的营养价值和文化内涵。例如，猪脚富含蛋白质、钙质等营养成分，对人体有很好的滋补作用；卤汁则由多种香料和调料熬制而成，具有浓郁的香气和独特的口感。
+                    </p>
+                    
+                </article>
+                
+            </main>
+            
+        </div>
+    </div>
+</body>
+</html>
